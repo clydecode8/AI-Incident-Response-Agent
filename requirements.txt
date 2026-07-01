@@ -1,0 +1,17 @@
+streamlit
+elasticsearch
+groq
+google-generativeai
+python-dotenv
+pinecone
+deepeval
+
+langchain
+langchain-core
+
+sentence-transformers
+
+pydantic
+requests
+
+watchdog
