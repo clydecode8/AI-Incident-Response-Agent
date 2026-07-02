@@ -98,10 +98,10 @@ Evaluate Investigation Quality
 
 ---
 
-## Agent Workflow
+## Agent Evaluation
 
-![Workflow](images/model_evaluation.png)
-![Workflow](images/model_evaluation_v2.png)
+![Evaluation](images/model_evaluation.png)
+![Evaluation](images/model_evaluation_v2.png)
 
 ---
 
