@@ -1,6 +1,8 @@
+import os
+
 from elasticsearch import Elasticsearch
 
-ES_URL = "http://localhost:9200"
+ES_URL = os.getenv("ELASTICSEARCH_URL")
 INDEX_NAME = "incident-logs"
 
 es = Elasticsearch(ES_URL, request_timeout=30)

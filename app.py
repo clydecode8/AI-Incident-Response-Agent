@@ -466,10 +466,15 @@ selected_case_name = st.sidebar.selectbox(
 )
 
 
+GEMINI_CHAT_ENABLED = os.getenv("GEMINI_CHAT_ENABLED", "false").lower() == "true"
+GEMINI_EMBEDDING_ENABLED = os.getenv("GEMINI_EMBEDDING_ENABLED", "true").lower() == "true"
+
 LLM_OPTIONS = {
     "Groq (LLAMA 3.3 70B Versatile)": "groq",
-    "Gemini 2.5 Flash": "gemini",
 }
+
+if GEMINI_CHAT_ENABLED:
+    LLM_OPTIONS["Gemini 2.5 Flash"] = "gemini"
 
 config_path = "runtime/llm_config.json"
 
