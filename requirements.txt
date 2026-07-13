@@ -1,7 +1,7 @@
 streamlit
 elasticsearch
 groq
-google-generativeai
+google-genai
 python-dotenv
 pinecone
 deepeval
