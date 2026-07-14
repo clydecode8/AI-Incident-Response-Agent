@@ -12,7 +12,7 @@ mkdir -p \
 if [ ! -f runtime/llm_config.json ]; then
   cat > runtime/llm_config.json <<'EOF'
 {
-  "provider": "groq",
+  "provider": "groq"
 }
 EOF
 fi
