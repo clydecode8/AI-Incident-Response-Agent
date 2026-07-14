@@ -1,0 +1,14 @@
+{
+  "status": "RUNNING",
+  "updated_at": "2026-07-10T21:02:42.881242",
+  "watching": [
+    "application",
+    "hadoop",
+    "linux"
+  ],
+  "last_log_positions": {
+    "application": 373,
+    "hadoop": 132,
+    "linux": 0
+  }
+}

@@ -6,4 +6,3 @@ logs/
 metrics/
 .deepeval
 alerts/
-runtime/
