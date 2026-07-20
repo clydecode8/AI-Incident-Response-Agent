@@ -8,8 +8,10 @@ mkdir -p \
   incident-demo/logs \
   incident-demo/metrics
 
-# Create llm_config.json only when it does not already exist
-if [ ! -f runtime/llm_config.json ]; then
+# Repair llm_config.json if missing or invalid
+if ! python -m json.tool runtime/llm_config.json >/dev/null 2>&1; then
+  echo "Creating or repairing runtime/llm_config.json"
+
   cat > runtime/llm_config.json <<'EOF'
 {
   "provider": "groq"
@@ -17,8 +19,10 @@ if [ ! -f runtime/llm_config.json ]; then
 EOF
 fi
 
-# Create services_config.json only when it does not already exist
-if [ ! -f runtime/services_config.json ]; then
+# Repair services_config.json if missing or invalid
+if ! python -m json.tool runtime/services_config.json >/dev/null 2>&1; then
+  echo "Creating or repairing runtime/services_config.json"
+
   cat > runtime/services_config.json <<'EOF'
 {
   "monitor_enabled": true,
@@ -27,8 +31,8 @@ if [ ! -f runtime/services_config.json ]; then
 EOF
 fi
 
-# Create runtime state files only when missing
-if [ ! -f runtime/monitor_status.json ]; then
+# Repair monitor_status.json if missing or invalid
+if ! python -m json.tool runtime/monitor_status.json >/dev/null 2>&1; then
   printf '{}\n' > runtime/monitor_status.json
 fi
 
